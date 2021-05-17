@@ -12,14 +12,9 @@
             <vs-navbar-item :active="active == 'docs'" id="docs">
               Get Help
             </vs-navbar-item>
-            <vs-navbar-item :active="active == 'guide'" id="guide">
-              About US
-            </vs-navbar-item>
-            <vs-navbar-item :active="active == 'components'" id="components">
-              Contact Us
-            </vs-navbar-item>
+
             <vs-navbar-item :active="active == 'license'" id="license">
-              Join Us
+              Join List
             </vs-navbar-item>
           </template>
         </vs-navbar>
@@ -77,23 +72,12 @@
             </template>
             Get Help
           </vs-sidebar-item>
-          <vs-sidebar-item id="market">
-            <template #icon>
-              😃
-            </template>
-            About Us
-          </vs-sidebar-item>
-          <vs-sidebar-item id="Music">
-            <template #icon>
-              😄
-            </template>
-            Contact Us
-          </vs-sidebar-item>
+
           <vs-sidebar-item id="donate">
             <template #icon>
               😁
             </template>
-            Join Us
+            Join List
           </vs-sidebar-item>
         </vs-sidebar>
       </div>
