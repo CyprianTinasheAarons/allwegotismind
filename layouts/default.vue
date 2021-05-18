@@ -23,7 +23,7 @@
     </template>
     <template>
       <div class="flex justify-between items-center md:hidden block">
-        <button @click="sideNavbarVisible = true">
+        <button @click="openMenu">
           <svg
             class="w-12 h-12 m-2"
             fill="currentColor"
@@ -52,7 +52,7 @@
             <h1 class="tracking-wider uppercase font-semibold">
               🧠 AllWeGotIsMind
             </h1>
-            <button @click="sideNavbarVisible = false">
+            <button @click="closeMenu">
               <svg
                 class=" mx-2 w-12 h-12"
                 fill="currentColor"
@@ -185,6 +185,17 @@ export default {
       sideNavbarVisible: false
     };
   },
-  components: {}
+  components: {},
+  methods: {
+    openMenu() {
+      this.sideNavbarVisible = true;
+      document.documentElement.style.overflow = "hidden";
+    },
+
+    closeMenu() {
+      this.sideNavbarVisible = false;
+      document.documentElement.style.overflow = "auto";
+    }
+  }
 };
 </script>
