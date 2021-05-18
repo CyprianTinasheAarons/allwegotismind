@@ -70,7 +70,7 @@
                 <vs-button style="background-color:#fff;">
                   <img
                     src="../static/twitter-svgrepo-com.svg"
-                    class="h-6 w-6"
+                    class="w-6 h-6"
                   /> </vs-button
               ></a>
               <a class="text-dark" :href="`${post.link}`" target="_blank">
