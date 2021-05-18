@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="flex flex-col min-h-screen">
     <template>
       <div class="md:block hidden">
         <vs-navbar not-line center-collapsed v-model="active">
@@ -83,8 +83,8 @@
       </div>
     </template>
 
-    <Nuxt />
-    <footer class="text-gray-600 body-font">
+    <Nuxt class="flex-grow" />
+    <footer class="text-gray-600 body-font ">
       <div class="bg-gray-100">
         <div
           class="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col"
