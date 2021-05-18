@@ -45,7 +45,7 @@
               >
                 <vs-button style="background-color:#fff">
                   <img
-                    src="../static/icons8-whatsapp-30.png"
+                    src="../static/iconmonstr-whatsapp-1.svg"
                     class="w-6 h-6"
                   /> </vs-button
               ></a>
@@ -69,7 +69,7 @@
               >
                 <vs-button style="background-color:#fff;">
                   <img
-                    src="../static/icons8-twitter-48.png"
+                    src="../static/iconmonstr-twitter-1.svg"
                     class="h-6 w-6"
                   /> </vs-button
               ></a>
