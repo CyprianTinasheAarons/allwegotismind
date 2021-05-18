@@ -9,10 +9,6 @@
             </h1>
           </template>
           <template #right>
-            <vs-navbar-item :active="active == 'docs'" id="docs">
-              Get Help
-            </vs-navbar-item>
-
             <vs-navbar-item :active="active == 'license'" id="license">
               Join List
             </vs-navbar-item>
@@ -66,12 +62,6 @@
               </svg>
             </button>
           </template>
-          <vs-sidebar-item id="home">
-            <template #icon>
-              😀
-            </template>
-            Get Help
-          </vs-sidebar-item>
 
           <vs-sidebar-item id="donate">
             <template #icon>
