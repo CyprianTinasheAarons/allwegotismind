@@ -79,6 +79,17 @@
 
     <Nuxt class="flex-grow" />
     <footer class="text-gray-600 body-font ">
+      <div class="border m-4 p-4 rounded">
+        <p>
+          <span class="font-semibold">😉 Disclaimer: </span> information
+          provided on this website does not, and is not intended to, constitute
+          medical advice; instead, all information, content, and materials
+          available on this site are for general informational purposes only.
+          This website contains links to other third-party websites. Such links
+          are only for the convenience of the user and we are not responsible
+          for them.
+        </p>
+      </div>
       <div class="bg-gray-100">
         <div
           class="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col"
