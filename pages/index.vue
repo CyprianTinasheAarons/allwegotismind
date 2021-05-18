@@ -24,7 +24,7 @@
         />
       </div>
 
-      <div class="md:flex md:justify-between ">
+      <div class="md:flex md:justify-between " v-if="filteredList.length > 0">
         <div v-for="post in filteredList" :key="post.id">
           <vs-card type="2" class="md:m-2 md:p-2 ">
             <template #title>
@@ -44,7 +44,7 @@
                 :href="`https://api.whatsapp.com/send?phone=${post.whatsapp}`"
               >
                 <vs-button style="background-color:#25d366">
-                  <img8
+                  <img
                     src="../static/icons8-whatsapp-30.png"
                     class="w-6 h-6"
                   /> </vs-button
@@ -93,6 +93,17 @@
           </vs-card>
           <p class="text-sm m-2 p-2">#{{ post.tags }}</p>
         </div>
+      </div>
+      <div v-else>
+        <div class="flex justify-around">
+          <img
+            src="../static/undraw_sunlight_tn7t.svg"
+            class="object-cover md:w-1/4 w-full"
+          />
+        </div>
+        <h1 class="text-center font-semibold md:text-3xl text-xl m-2 p-2">
+          Sorry we didn't get anything.😊 But you can always try again. LOL
+        </h1>
       </div>
     </div>
   </div>
