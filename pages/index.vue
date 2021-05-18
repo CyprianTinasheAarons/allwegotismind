@@ -115,7 +115,7 @@ export default {
       postList: [
         new Post(
           1,
-          "Vue.js",
+          "Health",
           "Friendship Bench! FREE problem solving therapy with trained community heath workers",
           "https://vuejs.org/",
           "https://res.cloudinary.com/dqzpz4w3l/image/upload/v1620122717/pexels-ali-pazani-2777898_kls9yi.jpg",
@@ -125,8 +125,8 @@ export default {
           "mentalhealth"
         ),
         new Post(
-          1,
-          "Vue.js",
+          2,
+          "Health",
           "Friendship Bench! FREE problem solving therapy with trained community heath workers",
           "https://vuejs.org/",
           "https://res.cloudinary.com/dqzpz4w3l/image/upload/v1620122717/pexels-ali-pazani-2777898_kls9yi.jpg",
@@ -136,8 +136,8 @@ export default {
           "mentalhealth"
         ),
         new Post(
-          1,
-          "Vue.js",
+          3,
+          "Health",
           "Friendship Bench! FREE problem solving therapy with trained community heath workers",
           "https://vuejs.org/",
           "https://res.cloudinary.com/dqzpz4w3l/image/upload/v1620122717/pexels-ali-pazani-2777898_kls9yi.jpg",
@@ -147,8 +147,8 @@ export default {
           "health"
         ),
         new Post(
-          1,
-          "Vue.js",
+          4,
+          "Health",
           "Friendship Bench! FREE problem solving therapy with trained community heath workers",
           "https://vuejs.org/",
           "https://res.cloudinary.com/dqzpz4w3l/image/upload/v1620122717/pexels-ali-pazani-2777898_kls9yi.jpg",
