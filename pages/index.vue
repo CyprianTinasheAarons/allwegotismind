@@ -43,7 +43,7 @@
                 class="text-muted"
                 :href="`https://api.whatsapp.com/send?phone=${post.whatsapp}`"
               >
-                <vs-button style="background-color:#25d366">
+                <vs-button style="background-color:#fff">
                   <img
                     src="../static/icons8-whatsapp-30.png"
                     class="w-6 h-6"
