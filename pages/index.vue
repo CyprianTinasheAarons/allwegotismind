@@ -2,7 +2,7 @@
   <div>
     <div class="m-8 pt-8">
       <div
-        class="bg-gray-100 rounded-md p-2 text-gray-600 md:w-1/4 w-full flex m-2 p-2 "
+        class="bg-gray-100 rounded-md p-2 text-gray-600 md:w-1/4 w-full flex my-2 border-2"
       >
         <svg
           class="w-6 h-6"
@@ -16,112 +16,47 @@
             clip-rule="evenodd"
           ></path>
         </svg>
-        <input type="text" placeholder="Search site..." class="bg-gray-100" />
+        <input
+          type="text"
+          placeholder="Search using tags"
+          class="bg-gray-100 "
+          v-model="search"
+        />
       </div>
-      <div class="md:flex md:justify-between ">
-        <div class="md:flex md:justify-between ">
-          <div v-for="i in 4" :key="i">
-            <vs-card type="2" class="m-2 p-2 ">
-              <template #title>
-                <h3>Friendship Bench</h3>
-              </template>
-              <template #img>
-                <img
-                  src="../static/pexels-rodnae-productions-6936081.jpg"
-                  alt=""
-                />
-              </template>
-              <template #text>
-                <p>
-                  Friendship Bench! FREE problem solving therapy with trained
-                  community heath workers.
-                </p>
-              </template>
-              <template #interactions>
-                <a
-                  class="text-muted"
-                  href="https://api.whatsapp.com/send?phone=263777150345"
-                >
-                  <vs-button success>Whatsapp </vs-button></a
-                >
 
-                <a class="text-dark" href="tel:+263777150345"
-                  ><vs-button dark>Phone</vs-button></a
-                >
-
-                <a
-                  class="text-dark"
-                  href="https://www.twitter.com/allwegotismind"
-                >
-                  <vs-button primary>Twitter</vs-button></a
-                >
-                <a
-                  class="text-dark"
-                  href="https://allwegotismind.netlify.app"
-                  target="_blank"
-                >
-                  <vs-button style="background-color:#519657;"
-                    ><svg
-                      class="w-6 h-6"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"
-                      ></path>
-                      <path
-                        d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"
-                      ></path></svg
-                  ></vs-button>
-                </a>
-              </template>
-            </vs-card>
-            <p class="text-sm">#Mental #Doctor #Health</p>
-          </div>
-        </div>
-      </div>
       <div class="md:flex md:justify-between ">
-        <div v-for="i in 4" :key="i">
-          <vs-card type="2" class="m-2 p-2 ">
+        <div v-for="post in filteredList" :key="post.id">
+          <vs-card type="2" class="md:m-2 md:p-2 ">
             <template #title>
-              <h3>Friendship Bench</h3>
+              <h3>{{ post.title }}</h3>
             </template>
             <template #img>
-              <img
-                src="../static/pexels-rodnae-productions-6936081.jpg"
-                alt=""
-              />
+              <img :src="`${post.img}`" alt="" />
             </template>
             <template #text>
               <p>
-                Friendship Bench! FREE problem solving therapy with trained
-                community heath workers.
+                {{ post.description }}
               </p>
             </template>
             <template #interactions>
               <a
                 class="text-muted"
-                href="https://api.whatsapp.com/send?phone=263777150345"
+                :href="`https://api.whatsapp.com/send?phone=${post.whatsapp}`"
               >
                 <vs-button success>Whatsapp </vs-button></a
               >
 
-              <a class="text-dark" href="tel:+263777150345"
+              <a class="text-dark" :href="`tel:+${post.phone}`"
                 ><vs-button dark>Phone</vs-button></a
               >
 
               <a
                 class="text-dark"
-                href="https://www.twitter.com/allwegotismind"
+                :href="`https://www.twitter.com/${post.twitter}`"
               >
                 <vs-button primary>Twitter</vs-button></a
               >
-              <a
-                class="text-dark"
-                href="https://allwegotismind.netlify.app"
-                target="_blank"
-              >
+              <a class="text-dark" :href="`${post.link}`" target="_blank">
                 <vs-button style="background-color:#519657;"
                   ><svg
                     class="w-6 h-6"
@@ -139,7 +74,7 @@
               </a>
             </template>
           </vs-card>
-          <p class="text-sm">#Mental #Doctor #Health</p>
+          <p class="text-sm m-2 p-2">#{{ post.tags }}</p>
         </div>
       </div>
     </div>
@@ -147,7 +82,92 @@
 </template>
 
 <script>
-export default {};
+class Post {
+  constructor(
+    id,
+    title,
+    description,
+    link,
+
+    img,
+    whatsapp,
+    phone,
+    twitter,
+    tags
+  ) {
+    this.id = id;
+    this.title = title;
+    this.description = description;
+    this.link = link;
+
+    this.img = img;
+    this.whatsapp = whatsapp;
+    this.phone = phone;
+    this.twitter = twitter;
+    this.tags = tags;
+  }
+}
+
+export default {
+  data() {
+    return {
+      search: "",
+      postList: [
+        new Post(
+          1,
+          "Vue.js",
+          "Friendship Bench! FREE problem solving therapy with trained community heath workers",
+          "https://vuejs.org/",
+          "https://res.cloudinary.com/dqzpz4w3l/image/upload/v1620122717/pexels-ali-pazani-2777898_kls9yi.jpg",
+          "+263777150345",
+          "+263777150345",
+          "@CyprianAarons",
+          "mentalhealth"
+        ),
+        new Post(
+          1,
+          "Vue.js",
+          "Friendship Bench! FREE problem solving therapy with trained community heath workers",
+          "https://vuejs.org/",
+          "https://res.cloudinary.com/dqzpz4w3l/image/upload/v1620122717/pexels-ali-pazani-2777898_kls9yi.jpg",
+          "+263777150345",
+          "+263777150345",
+          "@CyprianAarons",
+          "mentalhealth"
+        ),
+        new Post(
+          1,
+          "Vue.js",
+          "Friendship Bench! FREE problem solving therapy with trained community heath workers",
+          "https://vuejs.org/",
+          "https://res.cloudinary.com/dqzpz4w3l/image/upload/v1620122717/pexels-ali-pazani-2777898_kls9yi.jpg",
+          "+263777150345",
+          "+263777150345",
+          "@CyprianAarons",
+          "health"
+        ),
+        new Post(
+          1,
+          "Vue.js",
+          "Friendship Bench! FREE problem solving therapy with trained community heath workers",
+          "https://vuejs.org/",
+          "https://res.cloudinary.com/dqzpz4w3l/image/upload/v1620122717/pexels-ali-pazani-2777898_kls9yi.jpg",
+          "+263777150345",
+          "+263777150345",
+          "@CyprianAarons",
+          "marriage"
+        )
+      ]
+    };
+  },
+  computed: {
+    filteredList() {
+      return this.postList.filter(post => {
+        return post.tags.toLowerCase().includes(this.search.toLowerCase());
+      });
+    }
+  }
+};
 </script>
 
 <style scoped></style>

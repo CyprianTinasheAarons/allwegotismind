@@ -103,7 +103,11 @@
           <span
             class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start"
           >
-            <a class="text-gray-500">
+            <a
+              class="text-gray-500"
+              href="https://www.facebook.com/allwegotismind"
+              target="_blank"
+            >
               <svg
                 fill="currentColor"
                 stroke-linecap="round"
@@ -117,7 +121,11 @@
                 ></path>
               </svg>
             </a>
-            <a class="ml-3 text-gray-500">
+            <a
+              class="ml-3 text-gray-500"
+              href="https://twitter.com/CyprianAarons"
+              target="_blank"
+            >
               <svg
                 fill="currentColor"
                 stroke-linecap="round"
@@ -131,7 +139,11 @@
                 ></path>
               </svg>
             </a>
-            <a class="ml-3 text-gray-500">
+            <a
+              class="ml-3 text-gray-500"
+              href="https://www.instagram.com/allwegotis"
+              target="_blank"
+            >
               <svg
                 fill="none"
                 stroke="currentColor"
