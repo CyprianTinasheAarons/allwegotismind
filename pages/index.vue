@@ -303,7 +303,7 @@ export default {
   computed: {
     filteredList() {
       return this.postList.filter(post => {
-        return this.search.length > 3
+        return this.search.length > 2
           ? post.title
               .toLowerCase()
               .trim()
