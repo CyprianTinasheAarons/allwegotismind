@@ -31,12 +31,16 @@
               {{ post.title }}
             </h1>
 
-            <vs-card type="2" class="md:m-2 md:p-2 ">
+            <vs-card type="2" class="md:m-2 md:p-2 w-full h-full ">
               <template #title>
                 <h3>{{ post.title }}</h3>
               </template>
               <template #img>
-                <img :src="`${post.img}`" alt="" />
+                <img
+                  :src="`${post.img}`"
+                  alt="image"
+                  class="h-48 w-auto object-cover"
+                />
               </template>
               <template #text>
                 <p>
@@ -170,7 +174,7 @@ export default {
           "The Friendship Bench",
           "Friendship Bench! FREE problem solving therapy with trained community heath workers",
           "https://friendshipbenchzimbabwe.org",
-          "https://res.cloudinary.com/dqzpz4w3l/image/upload/v1620122717/pexels-ali-pazani-2777898_kls9yi.jpg",
+          "https://res.cloudinary.com/dqzpz4w3l/image/upload/v1621891869/1589946087441_k49h3i.jpg",
           "+263784845294",
           "+263784845294",
           "@friendshipbench",
@@ -181,7 +185,7 @@ export default {
           "Phoebe Zimbabwe",
           "PHOEBE Zimbabwe - focuses on gender based advocacy catering for women in vulnerable situations. ",
           "https://phoebecentre.org.uk/zimbabwe/",
-          "https://res.cloudinary.com/dqzpz4w3l/image/upload/v1620122717/pexels-ali-pazani-2777898_kls9yi.jpg",
+          "https://res.cloudinary.com/dqzpz4w3l/image/upload/v1621892532/phoebe_dcu3b9.png",
           "+263714396012",
           "+263714396012",
           "@PhoebeZimbabwe",
@@ -192,7 +196,7 @@ export default {
           "Christian Counseling Center",
           "Christian Counseling Center - you don’t need to be a Christian or religious in any regard to seek help here. ",
           "https://christiancounsellingcentre.net",
-          "https://res.cloudinary.com/dqzpz4w3l/image/upload/v1620122717/pexels-ali-pazani-2777898_kls9yi.jpg",
+          "https://res.cloudinary.com/dqzpz4w3l/image/upload/v1621892650/Christian_iaoico.jpg",
           "+263773547544",
           "+263773547544",
           "",
@@ -203,7 +207,7 @@ export default {
           "Create Zim",
           "Create Zim - A platform for youths to connect and use their talents recreationally. Offers mindfulness workshops and free consultations with professionals.",
           "",
-          "https://res.cloudinary.com/dqzpz4w3l/image/upload/v1620122717/pexels-ali-pazani-2777898_kls9yi.jpg",
+          "https://res.cloudinary.com/dqzpz4w3l/image/upload/v1621891956/create_zim_sz0i9q.png",
           "+263772634466",
           "+263772634466",
           "@create_zim", //On IG
@@ -214,7 +218,7 @@ export default {
           "Connect Zimbabwe",
           "Connect Zimbabwe Institute of Systemic Therapy - their objective is to provide counselling and therapeutic services for individuals, families and communities to overcome a wide variety of social challenges",
           "https://connect.co.zw",
-          "https://res.cloudinary.com/dqzpz4w3l/image/upload/v1620122717/pexels-ali-pazani-2777898_kls9yi.jpg",
+          "https://res.cloudinary.com/dqzpz4w3l/image/upload/v1621892720/connect_atg7kl.png",
           "+263778914501",
           "+263713 794 846",
           "",
@@ -224,8 +228,8 @@ export default {
           6,
           "Unearthed ZW",
           "Unearthed ZW - a space to bring together those suffering from depression",
-          "https://connect.co.zw",
-          "https://res.cloudinary.com/dqzpz4w3l/image/upload/v1620122717/pexels-ali-pazani-2777898_kls9yi.jpg",
+          "",
+          "https://res.cloudinary.com/dqzpz4w3l/image/upload/v1621893555/unearthed_xmdyna.png",
           "+263774058764",
           "+263774058764",
           "",
@@ -236,7 +240,7 @@ export default {
           "Musasa Project",
           "Musasa Project - an NGO whose operations are based on advocacy, peace building and provision of direct  services such as counselling, legal aid, medical assistance, life skills and temporary shelter  to survivors of GBV",
           "https://musasa.co.zw",
-          "https://res.cloudinary.com/dqzpz4w3l/image/upload/v1620122717/pexels-ali-pazani-2777898_kls9yi.jpg",
+          "https://res.cloudinary.com/dqzpz4w3l/image/upload/v1621892405/musasa_modfmq.webp",
           "+2638080074",
           "+2637754423000",
           "",
@@ -247,7 +251,7 @@ export default {
           "Xoxa",
           "Xoxa - the first Mental Wellness chat app of its kind in Zimbabwe. You can chat to volunteers between 9am and 9pm about pretty much anything.",
           "https://xoxa.co.zw",
-          "https://res.cloudinary.com/dqzpz4w3l/image/upload/v1620122717/pexels-ali-pazani-2777898_kls9yi.jpg",
+          "https://res.cloudinary.com/dqzpz4w3l/image/upload/v1621892971/Screenshot_2021-05-24_at_23.49.19_etjrbp.png",
           "",
           "",
           "",
@@ -258,7 +262,7 @@ export default {
           "Africa Open Up",
           " Africa open up - a space for teenagers to talk about things they may not be comfortable telling their parents or who have parents who work a lot and don’t have the time to talk",
           "https://meetafricaopenup.wixsite.com/open ",
-          "https://res.cloudinary.com/dqzpz4w3l/image/upload/v1620122717/pexels-ali-pazani-2777898_kls9yi.jpg",
+          "https://res.cloudinary.com/dqzpz4w3l/image/upload/v1621893190/Screenshot_2021-05-24_at_23.53.02_c85hfg.png",
           "+263777791626",
           "+263777791626",
           "@AfricansUp",
@@ -269,7 +273,7 @@ export default {
           "Zimbabwe OCD Trust",
           " Zimbabwe OCD trust - Raises awareness and provides support to individuals and Zimbabwean communities who suffer from OCD and anxiety disorders.",
           "https://zimbabweocdtrust.org/take-action",
-          "https://res.cloudinary.com/dqzpz4w3l/image/upload/v1620122717/pexels-ali-pazani-2777898_kls9yi.jpg",
+          "https://res.cloudinary.com/dqzpz4w3l/image/upload/v1621893241/Zim_OCD_trust_sllm8k.png",
           "+263772298286",
           "+263772298286",
           "",
@@ -280,7 +284,7 @@ export default {
           "Global Institute of Emotional Health",
           "Global Institute of Emotional Health and Wellness - helps people achieve mental and emotional well-being through innovative platforms that are accessible and free",
           "https://mentalhealthsa.org.za",
-          "https://res.cloudinary.com/dqzpz4w3l/image/upload/v1620122717/pexels-ali-pazani-2777898_kls9yi.jpg",
+          "https://res.cloudinary.com/dqzpz4w3l/image/upload/v1621893322/GlobalInstituteOfEmotionalHealthWellness_LogoDesignFINAL_JPG-500x353_pg2yqf.jpg",
           "+263778914501",
           "+263713794846",
           "@create_zim",
@@ -291,7 +295,7 @@ export default {
           "Wellnesshub",
           "Connect Zimbabwe Institute of Systemic Therapy - their objective is to provide counselling and therapeutic services for individuals, families and communities to overcome a wide variety of social challenges",
           "https://wellnesshub.co.zw",
-          "https://res.cloudinary.com/dqzpz4w3l/image/upload/v1620122717/pexels-ali-pazani-2777898_kls9yi.jpg",
+          "https://res.cloudinary.com/dqzpz4w3l/image/upload/v1621893430/WIK8BboF_400x400_q1ctet.jpg",
           "+2638080475",
           "",
           "@WellnessHub_Zim",
