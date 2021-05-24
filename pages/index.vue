@@ -18,7 +18,7 @@
         </svg>
         <input
           type="text"
-          placeholder="Search using tags"
+          placeholder="Search using title"
           class="bg-gray-100 "
           v-model="search"
         />
@@ -30,6 +30,7 @@
             <h1 class="text-gray-700 font-semibold mx-2 my-2  p-2 text-sm">
               {{ post.title }}
             </h1>
+
             <vs-card type="2" class="md:m-2 md:p-2 ">
               <template #title>
                 <h3>{{ post.title }}</h3>
@@ -173,7 +174,7 @@ export default {
           "+263784845294",
           "+263784845294",
           "@friendshipbench",
-          ["health"]
+          ["mind"]
         ),
         new Post(
           2,
@@ -300,15 +301,18 @@ export default {
     };
   },
   computed: {
-    // filteredList() {
-    //   return this.postList.filter(post => {
-    //     return post.tags
-    //       .toLowerCase()
-    //       .includes(this.search.toLowerCase().toTrim());
-    //   });
-    // },
+    filteredList() {
+      return this.postList.filter(post => {
+        return this.search.length > 3
+          ? post.title
+              .toLowerCase()
+              .trim()
+              .includes(this.search.toLowerCase().trim())
+          : post;
+      });
+    },
     posts() {
-      return _.chunk(Object.values(this.postList), 3);
+      return _.chunk(Object.values(this.filteredList), 3);
     }
   }
 };
