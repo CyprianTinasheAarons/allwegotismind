@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="bg-gray-100">
     <div class="m-8 pt-8">
       <div
         class="bg-gray-100 rounded-md p-2 text-gray-600 md:w-1/4 w-full flex my-2 md:mx-4 border-2"
@@ -31,83 +31,85 @@
               {{ post.title }}
             </h1>
 
-            <vs-card type="2" class="md:m-2 md:p-2 w-full h-full ">
+            <vs-card type="3" class="md:m-2 md:p-2   ">
               <template #title>
                 <h3>{{ post.title }}</h3>
               </template>
-              <template #img>
+              <!-- <template #img>
                 <img
                   :src="`${post.img}`"
                   alt="image"
-                  class="h-48 w-auto object-cover"
+                  class="h-48 w-32 object-cover"
                 />
-              </template>
+              </template> -->
               <template #text>
-                <p>
+                <p class="py-2">
                   {{ post.description }}
                 </p>
-              </template>
-              <template #interactions>
-                <a
-                  class="text-muted"
-                  :href="`https://api.whatsapp.com/send?phone=${post.whatsapp}`"
-                  v-if="post.whatsapp"
-                >
-                  <vs-button style="background-color:#fff">
-                    <img
-                      src="../static/whatsapp-svgrepo-com.svg"
-                      class="w-6 h-6"
-                    /> </vs-button
-                ></a>
+                <div class="flex justify-around">
+                  <a
+                    class="text-muted"
+                    :href="
+                      `https://api.whatsapp.com/send?phone=${post.whatsapp}`
+                    "
+                    v-if="post.whatsapp"
+                  >
+                    <vs-button style="background-color:#eee">
+                      <img
+                        src="../static/whatsapp-svgrepo-com.svg"
+                        class="w-6 h-6"
+                      /> </vs-button
+                  ></a>
 
-                <a
-                  class="text-dark"
-                  :href="`tel:+${post.phone}`"
-                  v-if="post.phone"
-                  ><vs-button style="background-color:#607d8b"
-                    ><svg
-                      class="w-6 h-6"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"
-                      ></path></svg></vs-button
-                ></a>
+                  <a
+                    class="text-dark"
+                    :href="`tel:+${post.phone}`"
+                    v-if="post.phone"
+                    ><vs-button style="background-color:#607d8b"
+                      ><svg
+                        class="w-6 h-6"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"
+                        ></path></svg></vs-button
+                  ></a>
 
-                <a
-                  class="text-dark"
-                  :href="`https://www.twitter.com/${post.twitter}`"
-                  v-if="post.twitter"
-                >
-                  <vs-button style="background-color:#fff;">
-                    <img
-                      src="../static/twitter-svgrepo-com.svg"
-                      class="w-6 h-6"
-                    /> </vs-button
-                ></a>
-                <a
-                  class="text-dark"
-                  :href="`${post.link}`"
-                  v-if="post.link"
-                  target="_blank"
-                >
-                  <vs-button style="background-color:#519657;"
-                    ><svg
-                      class="w-6 h-6"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"
-                      ></path>
-                      <path
-                        d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"
-                      ></path></svg
-                  ></vs-button>
-                </a>
+                  <a
+                    class="text-dark"
+                    :href="`https://www.twitter.com/${post.twitter}`"
+                    v-if="post.twitter"
+                  >
+                    <vs-button style="background-color:#eee">
+                      <img
+                        src="../static/twitter-svgrepo-com.svg"
+                        class="w-6 h-6"
+                      /> </vs-button
+                  ></a>
+                  <a
+                    class="text-dark"
+                    :href="`${post.link}`"
+                    v-if="post.link"
+                    target="_blank"
+                  >
+                    <vs-button style="background-color:#519657;"
+                      ><svg
+                        class="w-6 h-6"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"
+                        ></path>
+                        <path
+                          d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"
+                        ></path></svg
+                    ></vs-button>
+                  </a>
+                </div>
               </template>
             </vs-card>
             <div class="flex ">
@@ -178,7 +180,7 @@ export default {
           "+263784845294",
           "+263784845294",
           "@friendshipbench",
-          ["mind"]
+          ["friends", "free", "therapy"]
         ),
         new Post(
           2,
@@ -189,7 +191,7 @@ export default {
           "+263714396012",
           "+263714396012",
           "@PhoebeZimbabwe",
-          ["health", "mental", "youth", "friendship"]
+          ["gender", "women"]
         ),
         new Post(
           3,
@@ -200,7 +202,7 @@ export default {
           "+263773547544",
           "+263773547544",
           "",
-          ["health", "mental", "youth", "friendship"]
+          ["counseling", "religious", "christian"]
         ),
         new Post(
           4,
@@ -211,7 +213,7 @@ export default {
           "+263772634466",
           "+263772634466",
           "@create_zim", //On IG
-          ["health", "mental", "youth", "friendship"]
+          ["counselling", "workshops", "mindfulness"]
         ),
         new Post(
           5,
@@ -222,7 +224,7 @@ export default {
           "+263778914501",
           "+263713 794 846",
           "",
-          ["health", "mental", "youth", "friendship"]
+          ["therapy", "families", "communities"]
         ),
         new Post(
           6,
@@ -233,7 +235,7 @@ export default {
           "+263774058764",
           "+263774058764",
           "",
-          ["health", "mental", "youth", "friendship"]
+          ["support", "depression"]
         ),
         new Post(
           7,
@@ -244,7 +246,7 @@ export default {
           "+2638080074",
           "+2637754423000",
           "",
-          ["health", "mental", "youth", "friendship"]
+          ["medical", "counseling", "GBV"]
         ),
         new Post(
           8,
@@ -255,7 +257,7 @@ export default {
           "",
           "",
           "",
-          ["health", "mental", "youth", "friendship"]
+          ["health", "mental", "wellness"]
         ),
         new Post(
           9,
@@ -266,7 +268,7 @@ export default {
           "+263777791626",
           "+263777791626",
           "@AfricansUp",
-          ["health", "mental", "youth", "friendship"]
+          ["parents", "teenagers"]
         ),
         new Post(
           10,
@@ -277,7 +279,7 @@ export default {
           "+263772298286",
           "+263772298286",
           "",
-          ["health", "mental", "youth", "friendship"]
+          ["health", "mental", "youth"]
         ),
         new Post(
           11,
@@ -288,7 +290,7 @@ export default {
           "+263778914501",
           "+263713794846",
           "@create_zim",
-          ["health", "mental", "youth", "friendship"]
+          ["emotional", "mental", "free"]
         ),
         new Post(
           12,
@@ -299,7 +301,7 @@ export default {
           "+2638080475",
           "",
           "@WellnessHub_Zim",
-          ["health", "mental", "youth", "friendship"]
+          ["families", "counseling", "challenges"]
         )
       ]
     };
