@@ -9,12 +9,17 @@
             </h1>
           </template>
           <template #right>
-            <vs-navbar-item :active="active == 'license'" id="license">
+            <vs-navbar-item :active="active == 'list'" id="list">
               <a
                 href="https://form.jotform.com/211375284893060"
                 target="_blank"
               >
                 Join List</a
+              >
+            </vs-navbar-item>
+            <vs-navbar-item :active="active == 'blog'" id="blog">
+              <a href="https://medium.com/@allwegotismind" target="_blank">
+                Blog</a
               >
             </vs-navbar-item>
           </template>
@@ -68,9 +73,14 @@
             </button>
           </template>
 
-          <vs-sidebar-item id="donate">
+          <vs-sidebar-item id="list">
             <a href="https://form.jotform.com/211375284893060" target="_blank">
-              😁Join List</a
+              😁 Join List</a
+            >
+          </vs-sidebar-item>
+          <vs-sidebar-item id="list">
+            <a href="https://medium.com/@allwegotismind" target="_blank">
+              📕 Blog</a
             >
           </vs-sidebar-item>
         </vs-sidebar>
