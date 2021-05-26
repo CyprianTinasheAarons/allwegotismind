@@ -27,10 +27,6 @@
       <div class="md:flex md:justify-between " v-if="posts.length">
         <div v-for="(chunk, index) in posts" :key="index">
           <div v-for="post in chunk" :key="post.id">
-            <h1 class="text-gray-700 font-semibold mx-2 my-2  p-2 text-sm">
-              {{ post.title }}
-            </h1>
-
             <vs-card type="3" class="md:m-2 md:p-2   ">
               <template #title>
                 <h3>{{ post.title }}</h3>
