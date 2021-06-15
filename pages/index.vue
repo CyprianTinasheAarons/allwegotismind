@@ -59,7 +59,7 @@
 
                   <a
                     class="text-dark"
-                    :href="`tel:+${post.phone}`"
+                    :href="`tel:${post.phone}`"
                     v-if="post.phone"
                     ><vs-button style="background-color:#607d8b"
                       ><svg
